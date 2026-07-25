@@ -99,4 +99,4 @@ assets.player.src = 'mario.png';
 // Kamu bisa pakai gambar sprite Goomba & Koin transparan:
 assets.enemy.src = 'https://i.ibb.co/3sH7Y21/goomba-sprite.png'; 
 assets.coin.src = 'https://i.ibb.co/L5342sC/coin.png';
-}
+
