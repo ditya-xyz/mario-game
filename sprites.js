@@ -87,3 +87,16 @@ function drawEnemyWithEffect(ctx, img, enemy) {
   drawSprite(ctx, img, enemy.x, enemy.y, enemy.width, enemy.height, isFacingLeft, '#a81000');
   ctx.restore();
 }
+
+// Di sprites.js
+const assets = {
+    player: new Image(),
+    enemy: new Image(),
+    coin: new Image()
+};
+
+assets.player.src = 'mario.png';
+// Kamu bisa pakai gambar sprite Goomba & Koin transparan:
+assets.enemy.src = 'https://i.ibb.co/3sH7Y21/goomba-sprite.png'; 
+assets.coin.src = 'https://i.ibb.co/L5342sC/coin.png';
+}
