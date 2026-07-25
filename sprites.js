@@ -88,7 +88,6 @@ function drawEnemyWithEffect(ctx, img, enemy) {
   ctx.restore();
 }
 
-// Di sprites.js
 const assets = {
     player: new Image(),
     enemy: new Image(),
