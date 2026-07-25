@@ -303,4 +303,13 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+// Contoh objek player kamu di script.js
+const player = {
+    x: 50,
+    y: 200,
+    width: 32,
+    height: 32,
+    facingRight: true // true = hadap kanan, false = hadap kiri
+}; 
+
 gameLoop();
