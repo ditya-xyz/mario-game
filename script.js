@@ -312,4 +312,28 @@ const player = {
     facingRight: true // true = hadap kanan, false = hadap kiri
 }; 
 
+// Array posisi awan
+const clouds = [
+    { x: 50, y: 30, size: 25 },
+    { x: 250, y: 50, size: 20 },
+    { x: 450, y: 25, size: 30 }
+];
+
+function drawClouds() {
+    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+    clouds.forEach(cloud => {
+        ctx.beginPath();
+        ctx.arc(cloud.x, cloud.y, cloud.size, 0, Math.PI * 2);
+        ctx.arc(cloud.x + 15, cloud.y - 10, cloud.size * 0.8, 0, Math.PI * 2);
+        ctx.arc(cloud.x + 35, cloud.y, cloud.size * 0.9, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Gerakkan awan lambat ke kiri (parallax effect)
+        cloud.x -= 0.3;
+        if (cloud.x < -60) cloud.x = canvas.width + 50;
+    });
+}
+
+// Panggil drawClouds() di fungsi draw/gameLoop utama kamu sebelum menggambar player
+
 gameLoop();
